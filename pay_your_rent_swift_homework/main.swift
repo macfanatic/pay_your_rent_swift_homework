@@ -16,6 +16,6 @@ guard CommandLine.arguments.count > 1 else {
 let path = CommandLine.arguments[1]
 let leases = Parser.read(path: path)
 
-for lease in leases {
+for lease in leases.sorted() {
     print(lease.raw)
 }
