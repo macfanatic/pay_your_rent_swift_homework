@@ -13,10 +13,15 @@ class Lease {
     var name: String
     var raw: String
     
+    fileprivate var numericUnit: Int?
+    fileprivate var alphaUnit: String?
+    
     init(unit: String, name: String, raw: String) {
         self.unit = unit
         self.name = name
         self.raw = raw
+        
+        parseUnit()
     }
     
     static func parse(_ string: String) -> Lease? {
@@ -32,6 +37,20 @@ class Lease {
             return nil
         } catch {
             return nil
+        }
+    }
+    
+    private func parseUnit() {
+        var regex = try! NSRegularExpression(pattern: "([a-zA-Z]+)(\\d*)", options: .caseInsensitive)
+        if let match = regex.firstMatch(in: self.unit, options: .anchored, range: NSRange(location: 0, length: self.unit.utf16.count)) {
+            self.alphaUnit = (self.unit as NSString).substring(with: match.rangeAt(1))
+            self.numericUnit = Int((self.unit as NSString).substring(with: match.rangeAt(2)))
+        } else {
+            regex = try! NSRegularExpression(pattern: "(\\d+)([a-zA-Z]*)", options: .caseInsensitive)
+            if let match = regex.firstMatch(in: self.unit, options: .anchored, range: NSRange(location: 0, length: self.unit.utf16.count)) {
+                self.numericUnit = Int((self.unit as NSString).substring(with: match.rangeAt(1)))
+                self.alphaUnit = (self.unit as NSString).substring(with: match.rangeAt(2))
+            }
         }
     }
 }
