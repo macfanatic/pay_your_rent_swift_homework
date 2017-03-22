@@ -34,6 +34,7 @@
 		C9BA4AB31E82163500150BBF /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
 		C9BA4AB51E82166D00150BBF /* Lease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lease.swift; sourceTree = "<group>"; };
 		C9BA4AB81E821AAA00150BBF /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample.txt; path = data/sample.txt; sourceTree = "<group>"; };
+		C9BA4ABA1E821C5400150BBF /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +72,7 @@
 				C9BA4AB11E82145700150BBF /* CommandLine+StandardError.swift */,
 				C9BA4AB31E82163500150BBF /* Parser.swift */,
 				C9BA4AB51E82166D00150BBF /* Lease.swift */,
+				C9BA4ABA1E821C5400150BBF /* README.md */,
 			);
 			path = pay_your_rent_swift_homework;
 			sourceTree = "<group>";
