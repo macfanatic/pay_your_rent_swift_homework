@@ -17,7 +17,9 @@ class Parser {
             
             var leases = [Lease]()
             contents.enumerateLines(invoking: { line, _ in
-                leases.append(Lease.parse(line))
+                if let lease = Lease.parse(line) {
+                    leases.append(lease)
+                }
             })
             
             return leases

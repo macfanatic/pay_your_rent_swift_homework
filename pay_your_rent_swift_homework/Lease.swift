@@ -19,7 +19,19 @@ class Lease {
         self.raw = raw
     }
     
-    static func parse(_ string: String) -> Lease {
-        return Lease(unit: "3", name: "Matt", raw: string)
+    static func parse(_ string: String) -> Lease? {
+        do {
+            let regex = try NSRegularExpression(pattern: "#([a-zA-Z0-9]+) [-–] (.+)", options: .caseInsensitive)
+            if let match = regex.firstMatch(in: string, options: .anchored, range: NSRange(location: 0, length: string.utf16.count)) {
+                let unit = (string as NSString).substring(with: match.rangeAt(1))
+                let name = (string as NSString).substring(with: match.rangeAt(2))
+                
+                return Lease(unit: unit, name: name, raw: string)
+            }
+            
+            return nil
+        } catch {
+            return nil
+        }
     }
 }
