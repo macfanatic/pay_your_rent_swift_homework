@@ -8,23 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		C9BA4AAB1E82136200150BBF /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA4AAA1E82136200150BBF /* main.swift */; };
+		C9BA4AB21E82145700150BBF /* CommandLine+StandardError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA4AB11E82145700150BBF /* CommandLine+StandardError.swift */; };
+		C9BA4AB41E82163500150BBF /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA4AB31E82163500150BBF /* Parser.swift */; };
+		C9BA4AB61E82166D00150BBF /* Lease.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9BA4AB51E82166D00150BBF /* Lease.swift */; };
+		C9BA4AB91E821BEC00150BBF /* sample.txt in CopyFiles */ = {isa = PBXBuildFile; fileRef = C9BA4AB81E821AAA00150BBF /* sample.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C9BA4AA51E82136100150BBF /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
+			buildActionMask = 12;
+			dstPath = data;
+			dstSubfolderSpec = 16;
 			files = (
+				C9BA4AB91E821BEC00150BBF /* sample.txt in CopyFiles */,
 			);
-			runOnlyForDeploymentPostprocessing = 1;
+			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		C9BA4AA71E82136200150BBF /* pay_your_rent_swift_homework */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pay_your_rent_swift_homework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C9BA4AAA1E82136200150BBF /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C9BA4AB11E82145700150BBF /* CommandLine+StandardError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CommandLine+StandardError.swift"; sourceTree = "<group>"; };
+		C9BA4AB31E82163500150BBF /* Parser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Parser.swift; sourceTree = "<group>"; };
+		C9BA4AB51E82166D00150BBF /* Lease.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Lease.swift; sourceTree = "<group>"; };
+		C9BA4AB81E821AAA00150BBF /* sample.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = sample.txt; path = data/sample.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,9 +66,21 @@
 		C9BA4AA91E82136200150BBF /* pay_your_rent_swift_homework */ = {
 			isa = PBXGroup;
 			children = (
+				C9BA4AB71E821A9100150BBF /* data */,
 				C9BA4AAA1E82136200150BBF /* main.swift */,
+				C9BA4AB11E82145700150BBF /* CommandLine+StandardError.swift */,
+				C9BA4AB31E82163500150BBF /* Parser.swift */,
+				C9BA4AB51E82166D00150BBF /* Lease.swift */,
 			);
 			path = pay_your_rent_swift_homework;
+			sourceTree = "<group>";
+		};
+		C9BA4AB71E821A9100150BBF /* data */ = {
+			isa = PBXGroup;
+			children = (
+				C9BA4AB81E821AAA00150BBF /* sample.txt */,
+			);
+			name = data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,7 +142,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9BA4AB61E82166D00150BBF /* Lease.swift in Sources */,
+				C9BA4AB41E82163500150BBF /* Parser.swift in Sources */,
 				C9BA4AAB1E82136200150BBF /* main.swift in Sources */,
+				C9BA4AB21E82145700150BBF /* CommandLine+StandardError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

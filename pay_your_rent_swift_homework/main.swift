@@ -8,5 +8,14 @@
 
 import Foundation
 
-print("Hello, World!")
+guard CommandLine.arguments.count > 1 else {
+    CommandLine.stderr("You must provide a path to a file")
+    exit(EXIT_FAILURE)
+}
 
+let path = CommandLine.arguments[1]
+let leases = Parser.read(path: path)
+
+for lease in leases {
+    print(lease.raw)
+}
